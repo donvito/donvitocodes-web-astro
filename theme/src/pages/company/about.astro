@@ -1,5 +1,6 @@
 ---
-import { TextSection } from '@littlesticks/odyssey-theme-components';
+import {Icon} from 'astro-icon'
+import { TextSection, Button } from '@littlesticks/odyssey-theme-components';
 import Layout from '../../layouts/Page.astro';
 import HeroSection from '../../components/sections/heros/HeroSection.astro';
 
@@ -16,6 +17,11 @@ const seo = {
 			<p>
         I'm DonvitoCodes, I livestreaming Tech & Startups. Welcome to my website where you can get updated with what is latest.
 			</p>
+      <Button href="/company/contact" customIcon>Contact Me
+				<Fragment slot="icon">
+          		<Icon name="ic:baseline-chevron-right"/>
+       			</Fragment>
+			</Button>	
 		</div>
     <picture slot="image-container">
       <img

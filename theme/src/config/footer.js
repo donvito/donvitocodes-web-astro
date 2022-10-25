@@ -10,6 +10,16 @@ export const footerSocials = [
     icon: "mdi:youtube",
   },
   {
+    name: 'Facebook',
+    url: 'https://www.facebook.com/donvitocodes',
+    icon: "ic:baseline-facebook",
+  },
+  {
+    name: 'Reddit',
+    url: 'https://www.reddit.com/r/donvitocodes/',
+    icon: "ic:baseline-reddit",
+  },  
+  {
     name: 'Github',
     url: 'https://github.com/donvito',
     icon: "mdi:github",
