@@ -46,9 +46,19 @@ const image = new URL(Astro.props.image || './social.webp', Astro.site);
 {settings.enableThemeSwitcher && <ThemeProvider />}
 
 <!-- Google Analytics -->
-<script>
+<!-- <script>
   var host = window.location.hostname;
   if(host != 'localhost') {
     // Place Google Analytics code here.
   }
+</script> -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1PJYTPXX7Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1PJYTPXX7Y');
 </script>
