@@ -1,94 +1,154 @@
 ---
-import { Container, FeatureCard} from '@littlesticks/odyssey-theme-components';
-
+import {Icon} from 'astro-icon'
+import {
+  AnnouncementBar,
+	Button,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	YouTubeEmbedSection,
+  StickyTextImageSection,
+  CtaCardSection
+} from '@littlesticks/odyssey-theme-components';
 import Layout from '../layouts/Page.astro';
-import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
+import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
+
+const seo = {
+	title: 'DonvitoCodes',
+	description: 'DonvitoCodes',
+};
 ---
 
-<Layout>
-	<HomeHeroSection />
-	<Container>
-		<section class="feature-card__section">
-			<h2>Landing Pages</h2>
-			<p>
-				Use one of our landing pages to jumpstart your website or
-				ad campaign.
-			</p>
-			<div class="feature-card__grid">
-				<FeatureCard href="/landing-pages/landing-1" title="Landing Page 1" imgSrc="/assets/images/home/screenshots/landing-1">
-				</FeatureCard>
-				<FeatureCard href="/landing-pages/landing-2" title="Landing Page 2" imgSrc="/assets/images/home/screenshots/landing-2">
-				</FeatureCard>
-        <FeatureCard href="#" title="Landing Page 3" imgSrc="/assets/images/home/screenshots/landing-3">
-				</FeatureCard>
-			</div>
-		</section>
-	</Container>
+<AnnouncementBar text="Register for our upcoming live!" href="#eventbrite link" slot="announcement-bar"/>
+<Layout seo={seo} >
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h1>Welcome to DonvitoCodes!</h1>
+			<p>I'm DonvitoCodes, I livestreaming Tech & Startups. Welcome to my website where you can get updated with what is latest.</p>
+		</div>
+		<div slot="btns-container">
+			<Button href="https://twitch.tv/donvitocodes" customIcon
+				>Follow me in Twitch!<Fragment slot="icon">
+          <Icon name="ic:baseline-chevron-right"/>
+        </Fragment></Button
+			>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/donvitocodes/donvitocodes_screenshot.webp"
+				alt="Astro Odyssee"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
 
-	<Container>
-		<section class="feature-card__section">
-			<h2>Company Pages</h2>
-			<p>
-				Use one of our prebuilt company pages for your about page, contact page,
-				legal pages, blog posts, etc.
-			</p>
-			<div class="feature-card__grid">
-				<FeatureCard href="/company/about" title="About Page" imgSrc="/assets/images/home/screenshots/about">
-				</FeatureCard>
-				<FeatureCard href="/company/contact" title="Contact Page" imgSrc="/assets/images/home/screenshots/contact">
-				</FeatureCard>
-				<FeatureCard href="/blog/" title="Blog Page" imgSrc="/assets/images/home/screenshots/blog">
-				</FeatureCard>
-				<FeatureCard
-					href="/blog/posts/remote-work-mental-health"
-					title="Blog Post"
-          imgSrc="/assets/images/home/screenshots/blog-post"
-				>
-				</FeatureCard>
-				<FeatureCard
-					href="/company/legal"
-					imgSrc="/assets/images/home/screenshots/legal"
-					title="Legal Page"
-				>
-				</FeatureCard>
-			</div>
-		</section>
-	</Container>
+	<CustomerQuoteSection
+		quoteText="My dream is to help Filipinos get into Tech. Let's make the Philippines become a software development powerhouse globally."
+		customerName="DonvitoCodes"
+	/>
 
-	<Container>
-		<section class="feature-card__section">
-			<h2>Theme Pages</h2>
-			<p>Learn more about how to set up and use the Odyssey Theme.</p>
-			<div class="feature-card__grid">
-				<FeatureCard
-					href="/theme/get-started"
-					imgSrc="/assets/images/home/screenshots/get-started"
-					title="Get Started"
-				>
-				</FeatureCard>
-				<FeatureCard
-					href="/theme/style-guide"
-					imgSrc="/assets/images/home/screenshots/style-guide"
-					title="Style Guide"
-				>
-				</FeatureCard>
-			</div>
-		</section>
-	</Container>
+	<!-- <ThreeColumnTextSection>
+		<div slot="column-1-body">
+			<h2>Why?</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+				mollitia cumque. Velit.
+			</p>
+		</div>
+		<Button slot="column-1-cta">Learn More</Button>
+		<div slot="column-2-body">
+			<h2>How?</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+				mollitia cumque. Velit.
+			</p>
+		</div>
+		<Button slot="column-2-cta" outlined>Learn More</Button>
+		<div slot="column-3-body">
+			<h2>What?</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+				mollitia cumque. Velit.
+			</p>
+		</div>
+		<Button slot="column-3-cta">Learn More</Button>
+	</ThreeColumnTextSection> -->
+
+	<!-- <YouTubeEmbedSection url="https://youtu.be/lcalIP2CRqU" rounded /> -->
+
+  <StickyTextImageSection>
+    <div slot="text-container">
+      <h2>Past Episodes</h2>
+
+	  <h3>Ep 5. Free online tech learning resources/tools</h3>
+      <p>
+		In this episode, we searched for good online learning resources which we collated and shared to those who would want to learn how to code. 
+
+		<YouTubeEmbedSection url="https://youtu.be/lcalIP2CRqU" rounded />
+      </p>
+
+	  <h3>Ep 4.  What's the best programming language to learn for beginners?</h3>
+      <p>
+		We took a look at some programming languages and got a feel of what is the best programming language to learn for beginners.
+
+		<YouTubeEmbedSection url="https://youtu.be/GZdahwShmTA" rounded />
+      </p>
+
+	  <h3>Ep 3.  How to prepare for Big Tech Company Technical Interview</h3>
+      <p>
+		Spoke to Marc Lester Tan, our special guest. He's a Filipino developer who is currently working as a Software Engineer @ Meta - Palo Alto, California, United States.
+
+		<YouTubeEmbedSection url="https://youtu.be/6vL9uxH6vZ4" rounded />
+      </p>
+
+	  <h3>Ep 2. Astro 1.0 Web Framework is out! Let's check it out!</h3>
+      <p>
+		For those who missed my stream earlier, we took Astro 1.0 for a spin! It was really a delightful experience! Check out the replay below to see how we ran an example blog using Astro.
+		Check out Astro here https://astro.build/
+
+		<YouTubeEmbedSection url="https://youtu.be/YrqBk9B6tZI" rounded />
+      </p>
+
+	  <h3>Ep 1. How to Become a Software Developer</h3>
+      <p>
+		In this episode, we searched for good online learning resources which we collated and shared to those who would want to learn how to code. 
+
+		<YouTubeEmbedSection url="https://youtu.be/g_V9kKhhwgI" rounded />
+	  </p>
+      
+	  <Button href="/theme/get-started" customIcon>View the archives<Fragment slot="icon">
+		<Icon name="ic:baseline-chevron-right"/>
+	  </Fragment></Button>
+
+	 
+
+    </div>
+     <picture slot="image-container">
+		<a href="#eventbritelink"><img
+			src="/assets/images/donvitocodes/keithposter.png"
+			alt="Our Next Event"
+			loading="lazy"
+		/>
+		</a>
+	  <p/>
+	  <Button href="#eventbritelink" customIcon>Register here! <Fragment slot="icon">
+		<Icon name="ic:baseline-chevron-right"/>
+	  </Fragment></Button>
+    </picture>
+  </StickyTextImageSection>
+
+  <CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
+    <h2>Remote Work - Is it really the future? </h2>
+    <p>We'll be talking about remote work, it's challenges and advantages. We'll speak to someone who is doing remote work for the past few years.</p>
+    <Button href="#eventbritelink" customIcon>Register here!<Fragment slot="icon">
+      <Icon name="ic:baseline-chevron-right"/>
+    </Fragment></Button>
+  </CtaCardSection>
+
 </Layout>
 
-<style>
-	.feature-card__section {
-		margin: var(--section-margin) auto;
-	}
-	.feature-card__grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: var(--theme-grid-gap);
-	}
-	@media (max-width: 768px) {
-		.feature-card__grid {
-			grid-template-columns: 1fr;
-		}
-	}
-</style>

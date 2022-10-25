@@ -40,9 +40,9 @@
 [data-theme='default'] {
 	color-scheme: light;
 	/* Theme Colors */
-	--theme-primary: hsl(0, 0%, 0%);
-	--theme-primary-hover: hsl(0, 0%, 20%);
-	--theme-on-primary: #fff;
+	--theme-primary: hsl(283, 88%, 26%);
+	--theme-primary-hover: hsl(270, 88%, 69%);
+	--theme-on-primary: rgb(255, 255, 255);
 
 	--theme-bg: #fff;
 	--theme-on-bg: #000;
@@ -50,7 +50,7 @@
 	--theme-surface-1: #f2f2f2;
 	--theme-on-surface-1: #000;
 
-	--theme-surface-2: #cce6d0;
+	--theme-surface-2: #dec7f9;
 	--theme-on-surface-2: #000;
 
 	/* Theme Shape */
