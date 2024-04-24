@@ -12,5 +12,8 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"format": "npx prettier -w ."
+	},
+	"dependencies": {
+		"astro": "^2.10.15"
 	}
 }
