@@ -4,9 +4,13 @@ export const nav = [
 		slug: '/',
 	},
 	{
-		title: 'Blog',
-		slug: '/blog',
+		title: 'Blogs',
+		slug: 'https://techblogs.donvitocodes.com',
 	},
+	{
+		title: 'Videos',
+		slug: '/blog/posts/episodes-archive',
+	},	
 	{
 		title: 'About',
 		slug: '/company/about',

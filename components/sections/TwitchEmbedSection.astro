@@ -1,0 +1,18 @@
+---
+import Container from '../core/Container.astro';
+import TwitchEmbed from '../core/TwitchEmbed.astro';
+
+const {url, rounded} = Astro.props;
+---
+
+<Container>
+  <section class="twitch-embed__section">
+    <TwitchEmbed url={url} rounded={rounded} />
+  </section>
+</Container>
+
+<style>
+ .twitch-embed__section {
+   margin: var(--section-margin) auto;
+ }
+</style>
