@@ -5,8 +5,16 @@ import {generateTagData} from '../../../utils/helpers.js'
 
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob('../posts/*.mdx');
-  const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+
+  const sortedPosts = [
+  { frontmatter: { tags: ["Tech", "Innovation"] }, content: "Post about technology." },
+  { frontmatter: { tags: ["Health", "Wellness"] }, content: "Post about health." },
+  { frontmatter: { tags: ["Finance", "Investing"] }, content: "Post about finance." },
+  { frontmatter: { tags: ["Tech", "AI"] }, content: "Post about AI in technology." },
+];
+
+  //const allPosts = await Astro.glob('../posts/*.mdx');
+  //const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
   const allCategoriesUnique = new Set();
   
   sortedPosts.forEach(post => {

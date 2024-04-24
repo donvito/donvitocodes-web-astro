@@ -4,12 +4,20 @@ export const nav = [
 		slug: '/',
 	},
 	{
-		title: 'Blogs',
-		slug: 'https://techblogs.donvitocodes.com',
+		title: 'Twitch',
+		slug: 'https://twitch.tv/donvitocodes',
 	},
 	{
-		title: 'Videos',
-		slug: '/blog/posts/episodes-archive',
+		title: 'Youtube',
+		slug: 'https://youtube.com/donvitocodes',
+	},
+	{
+		title: 'LinkedIn',
+		slug: 'https://www.linkedin.com/in/melvinvivas/',
+	},
+	{
+		title: 'Blogs',
+		slug: 'https://techblogs.donvitocodes.com',
 	},	
 	{
 		title: 'About',
