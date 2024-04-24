@@ -4,13 +4,13 @@ import {
   AnnouncementBar,
 	Button,
 	CustomerQuoteSection,
-	ThreeColumnTextSection,
 	YouTubeEmbedSection,
   StickyTextImageSection,
   CtaCardSection
 } from '@littlesticks/odyssey-theme-components';
 import Layout from '../layouts/Page.astro';
 import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
+import HeroSection from '../components/sections/heros/HeroSection.astro';
 
 const seo = {
 	title: 'DonvitoCodes',
@@ -20,35 +20,61 @@ const seo = {
 
 <AnnouncementBar text="Get Live Notifications, Follow me in Twitch!" href="https://twitch.tv/donvitocodes" slot="announcement-bar"/>
 <Layout seo={seo} >
-	<TextAndImageHero reversed>
-		<div slot="text-container">
-			<h1>Welcome!</h1>
-			<p>I'm Melvin aka DonvitoCodes, I livestream about Tech & Startups in Twitch. Welcome to my website where you can get updated with what is latest.</p>
+	<TextAndImageHero>
+		<div slot="text-container">		
+			<h3>Hi there! I livestream about Technology in Twitch!</h3>
+
+			<p>I've <strong>transformed my passion into a profession</strong>, and now it's your turn to join me on this exciting adventure.</p>				
+			<p>My channel goes beyond live streaming in <a href="https://twitch.tv/donvitocodes" target="_blank"><strong>Twitch</strong></a>. I also upload bite-sized, digestible tutorials in my <a href="https://youtube.com/donvitocodes" target="_blank"><strong>YouTube Channel</strong></a>. And if you like reading more, you can read my <em>Exploring AI and Technology</em> publication in <a href="https://techblogs.donvitocodes.com/" target="_blank"><strong>Medium</strong></a>. 
+			
+			<p>In my <a href="https://twitch.tv/donvitocodes" style="display: inline-block; font-weight: bold;"  target="_blank">
+				livestream
+			</a>, I also host podcasts featuring industry experts and tech leaders to deliver real-world insights straight to your ears. This journey isn't just about building skills, it's about fostering a supportive and engaged community of developers. </p>
+			<!-- If you're stuck and need guidance I can do personalized coaching sessions, and a thriving community of tech enthusiasts.</p> -->
+
+			<div style="margin-bottom: 20px;">
+				<strong>Follow me in</strong><br/>
+				<a href="https://twitch.tv/donvitocodes" style="display: inline-block; margin-right: 10px; font-weight: bold;"  target="_blank">
+					Twitch
+				</a>
+				<a href="https://youtube.com/donvitocodes" style="display: inline-block; margin-right: 10px; font-weight: bold;" target="_blank">
+					YouTube
+				</a>
+				<a href="https://techblogs.donvitocodes.com" style="display: inline-block; margin-right: 10px; font-weight: bold;" target="_blank">
+					Blogs
+				</a>
+				<a href="https://www.linkedin.com/in/melvinvivas/" style="display: inline-block; margin-right: 10px; font-weight: bold;" target="_blank">
+					LinkedIn
+				</a>
+				<a href="https://twitter.com/donvito" style="display: inline-block; margin-right: 10px; font-weight: bold;" target="_blank">
+					Twitter
+				</a>
+				<a href="https://www.facebook.com/donvitocodes" style="display: inline-block; margin-right: 10px; font-weight: bold;" target="_blank">
+					Facebook
+				</a>
+				
+			</div>
+
+			<div>
+				I also invite you to join our Discord</strong><br/>			
+				<a href="https://discord.gg/CnXuM2APee" style="display: inline-block; margin-right: 15px;" target="_blank">
+					<strong>DonvitoCodes Tech Community</strong>
+				</a>
+			</div>
 		</div>
-		<div slot="btns-container">
-			<Button href="https://twitch.tv/donvitocodes" customIcon>Follow me in Twitch!
-				<Fragment slot="icon">
-          		<Icon name="ic:baseline-chevron-right"/>
-       			</Fragment>
-			</Button><p/>	
-			<Button href="https://techblogs.donvitocodes.com" customIcon>or read stories my blog
-				<Fragment slot="icon">
-          		<Icon name="ic:baseline-chevron-right"/>
-       			</Fragment>
-			</Button>		
-		</div>			
-		
-		<picture slot="image-container">
-			<img
+				
+		<picture slot="image-container">						
+			<a href="https://twitch.tv/donvitocodes" style="display: inline-block; margin-right: 10px;" target="_blank"><img
 				src="/assets/images/donvitocodes/donvitocodes_screenshot.webp"
-				alt="Astro Odyssee"
+				alt="DonvitoCodes"
 				id="home-hero-image"
-			/>
+			/></a>
 		</picture>		
+	
 	</TextAndImageHero>
 
 	<CustomerQuoteSection
-		quoteText="My dream is to help Filipinos get into Tech. Let's make the Philippines become a software development powerhouse globally."
+		quoteText="Join me and let's explore the tech world together! From getting you started to keeping you up to date with the latest trends, I'm here to help you grow and succeed. Let's make tech fun and accessible for everyone!"
 		customerName="DonvitoCodes"
 	/>
 
@@ -145,17 +171,16 @@ const seo = {
 
     </div>
      <picture slot="image-container">
+		<h3>Latest Video</h3>
 		<a href="https://youtu.be/aLqmfJwOULI?t=264"><img
-			src="/assets/images/donvitocodes/AI_with_Aivan_Monceller.png"
+			src="/assets/images/donvitocodes/meta_thumbnail_youtube.png"
 			alt="Our Next Event"
 			loading="lazy"
 		/>
 		</a>
 	  <p/>
-	  <Button href="https://www.twitch.tv/donvitocodes" customIcon>Follow me in Twitch! <Fragment slot="icon">
-		<Icon name="ic:baseline-chevron-right"/>
-	  </Fragment></Button>
     </picture>
+	
   </StickyTextImageSection>
 
   <CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
