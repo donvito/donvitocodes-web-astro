@@ -16,9 +16,17 @@ export const nav = [
 		slug: 'https://www.linkedin.com/in/melvinvivas/',
 	},
 	{
-		title: 'Blogs',
+		title: 'Medium',
 		slug: 'https://techblogs.donvitocodes.com',
-	},	
+	},
+	{
+		title: 'Facebook',
+		slug: 'https://fb.com/donvitocodes',
+	},
+	{
+		title: 'Twitter',
+		slug: 'https://twitter.com/donvito',
+	},
 	{
 		title: 'About',
 		slug: '/company/about',
