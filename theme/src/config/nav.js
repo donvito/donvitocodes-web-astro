@@ -13,7 +13,7 @@ export const nav = [
 	},
 	{
 		title: 'LinkedIn',
-		slug: 'https://www.linkedin.com/in/melvinvivas/',
+		slug: 'https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=melvinvivas',
 	},
 	{
 		title: 'Medium',
