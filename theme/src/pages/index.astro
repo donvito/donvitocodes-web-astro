@@ -6,7 +6,8 @@ import {
 	CustomerQuoteSection,
 	YouTubeEmbedSection,
   StickyTextImageSection,
-  CtaCardSection
+  CtaCardSection,
+  ThreeColumnTextSection
 } from '@littlesticks/odyssey-theme-components';
 import Layout from '../layouts/Page.astro';
 import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
@@ -18,19 +19,25 @@ const seo = {
 };
 ---
 
-<AnnouncementBar text="Get Live Notifications!" href="https://twitch.tv/donvitocodes" slot="announcement-bar"/>
+<AnnouncementBar text="Book a Discovery call for Free!" target="_blank" href="https://buymeacoffee.com/donvitocodes/e/260160" slot="announcement-bar"/>
 <Layout seo={seo} >
 	
 	<TextAndImageHero>
 		<div slot="text-container">		
 			
-			<h3>Let's learn AI!</h3>
+		
+			<h3>Hello, I'm DonvitoCodes!</h3>
 
-			<p>Hello, I'm DonvitoCodes!</p>
+			<p>After working in software engineering and tech leadership for 24 years, I decided to quit my full-time job in 2024 to embrace the life of a content creator. </p>			
+
+			<p>I actively do <a href="https://twitch.tv/donvitocodes" target="_blank">livestreams</a> in Twitch and create Youtube <a href="https://youtube.com/donvitocodes" target="_blank">videos and podcasts</a> about AI, Software Development and Tech Careers.</p>
+
+			<p>If you need someone to talk to about your tech career, <a href="https://buymeacoffee.com/donvitocodes/e/260160" target="_blank">let's connect</a>! Let's discover how I help you navigate the tech world and thrive in your career.</p> 
 				
-			<p>I share my learning journey on AI and Software Development in my <a href="https://twitch.tv/donvitocodes" style ="font-weight: bold;" target="_blank" target="_blank">Twitch livestream</a>  and my <a href="https://youtube.com/donvitocodes" style ="font-weight: bold;" target="_blank" target="_blank">YouTube channel</a>. Sometimes, I host podcasts with tech leaders in my livestream. I also write articles in my blog, <a href="https://techblogs.donvitocodes.com/" target="_blank"><strong>Exploring AI and Technology</strong></a>.
-			</p>
+			<p>I also provide consulting on how you can leverage technology such as AI and automation to help your organization. You can <a href="https://buymeacoffee.com/donvitocodes/e/260160" target="_blank">book a discover call for free</a>.</p>							
+
 			
+<!-- 
 
 			<div style="margin-bottom: 20px;">
 				Feel free to connect with me in
@@ -38,7 +45,7 @@ const seo = {
 				<a href="https://twitter.com/donvito" style ="font-weight: bold;" target="_blank" target="_blank">Twitter</a>, or
 				<a href="https://www.facebook.com/donvitocodes" style ="font-weight: bold;" target="_blank" target="_blank">Facebook</a>
 				
-			</div>
+			</div> -->
 			
 			<!-- <div style="margin-bottom: 20px;">
 				<strong>You can also follow me in:</strong><br/>
@@ -63,58 +70,64 @@ const seo = {
 				
 			</div> -->
 
-			<div>
+			<!-- <div>
 				Want to discuss or share ideas? You can join our <a href="https://discord.gg/CnXuM2APee" target="_blank"><em>DonvitoCodes Discord Community</em></a>
-			</div>
+			</div> -->
 		</div>
 				
 		<picture slot="image-container">						
-			<a href="https://twitch.tv/donvitocodes" style="display: inline-block; margin-right: 10px;" target="_blank"><img
-				src="/assets/images/donvitocodes/stream_intro.jpeg"
+			<a href="https://buymeacoffee.com/donvitocodes/extras" style="display: inline-block; margin-right: 10px;" target="_blank"><img
+				src="/assets/images/donvitocodes/tv_photo.jpg"
 				alt="DonvitoCodes"
 				id="home-hero-image"
-			/></a>
+			/></a>			
 		</picture>		
+
+		<!-- <picture slot="image-container">						
+			<p><YouTubeEmbedSection url="https://www.youtube.com/embed/-m_S_0F3cNU?si=5iDRM60y-Gc5bDQX&amp;start=4251" rounded /></p>
+		</picture> -->
+
+
+		<!-- <picture slot="image-container">						
+			<a href="https://buymeacoffee.com/donvitocodes/extras" style="display: inline-block; margin-right: 10px;" target="_blank"><img
+				src="/assets/images/donvitocodes/bmc_shop.png"
+				alt="DonvitoCodes"
+				id="home-hero-image"
+			/></a>			
+		</picture> -->
+
 	
 	</TextAndImageHero>
 
-	<CustomerQuoteSection
+	<!-- <CustomerQuoteSection
 	quoteText="Learn AI with me! I share my learnings on AI and Software Development in my Twitch and YouTube channels. Follow me and let's have fun learning together!"
 	customerName="DonvitoCodes"
-/>
+/> -->
 
-	<!-- <ThreeColumnTextSection>
+	<ThreeColumnTextSection>
 		<div slot="column-1-body">
-			<h2>Why?</h2>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
-			</p>
+			<!-- <h2>Boost Productivity with ChatGPT</h2> -->
+			<a href="https://buymeacoffee.com/donvitocodes/e/260160">
+				<img src="/assets/images/donvitocodes/services/discovery_call_free.png" alt="Discovery Call" />
+			</a>
+			<br/>
 		</div>
-		<Button slot="column-1-cta">Learn More</Button>
+		<Button href="https://buymeacoffee.com/donvitocodes/e/260160" slot="column-1-cta">Learn More</Button>
 		<div slot="column-2-body">
-			<h2>How?</h2>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
-			</p>
+			<a href="https://buymeacoffee.com/donvitocodes/e/260100">
+				<img src="/assets/images/donvitocodes/services/tech_career.png" alt="Grow your Tech Career" />
+			</a>	
+			<br/>
 		</div>
-		<Button slot="column-2-cta" outlined>Learn More</Button>
+		<Button href="https://buymeacoffee.com/donvitocodes/e/260100" slot="column-2-cta">Learn More</Button>
 		<div slot="column-3-body">
-			<h2>What?</h2>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
-			</p>
+			<a href="https://buymeacoffee.com/donvitocodes/e/260379">
+				<img src="/assets/images/donvitocodes/services/ai_consulting.png" alt="AI Consulting" />
+			</a>
+			<br/>
 		</div>
-		<Button slot="column-3-cta">Learn More</Button>
-	</ThreeColumnTextSection> -->
+		<Button href="https://buymeacoffee.com/donvitocodes/e/260379" slot="column-3-cta">Learn More</Button>
+	</ThreeColumnTextSection>
 
 	<!-- <YouTubeEmbedSection url="https://youtu.be/lcalIP2CRqU" rounded /> -->
 
@@ -122,7 +135,20 @@ const seo = {
     <div slot="text-container">
       <h2>Featured Episodes</h2>
 
-	  <h3>Ep 8. The Fun and Exciting Impact of Artificial Intelligence(AI)</h3>
+	  <h3>Let's explore ChatGPT/OpenAI APIs</h3>
+      <p>
+		In this episode, we explored OpenAI ChatGPT APIs and demoed Golang application calling the OpenAI APIs. I also showed 
+		the OpenAI API dashboard.
+		<YouTubeEmbedSection url="https://www.youtube.com/embed/-m_S_0F3cNU?si=rwl3zOSBMre0I_v3" rounded />		
+      </p>
+
+	  <h3>Enrich your Life and Work with AI</h3>
+      <p>
+		In this episode, we explored how we can use Generative AI tools like ChatGPT to be more productive in our life and work.
+		<YouTubeEmbedSection url="https://www.youtube.com/watch?v=EoWHanHswCg" rounded />		
+      </p>
+
+	  <h3>The Fun and Exciting Impact of Artificial Intelligence(AI)</h3>
       <p>
 		In this episode, Aivan Monceller, our AI-enthusiast guest, 
 		discussed how AI is revolutionizing productivity in technology and everyday life. 
@@ -131,27 +157,27 @@ const seo = {
 		<YouTubeEmbedSection url="https://youtu.be/mPVToFWLxFY" rounded />
       </p>
 
-	  <h3>Ep 1. How to Become a Software Developer</h3>
+	  <h3>How to Become a Software Developer</h3>
       <p>
 		Our maiden episode. In this episode, I discussed with Aivan Monceller, Software Engineer @ Razer Singapore, about how anyone can start the career in software development.
 		<YouTubeEmbedSection url="https://youtu.be/g_V9kKhhwgI" rounded />
       </p>
 
-	  <h3>Ep 3. How to prepare for Big Tech Company Technical Interview</h3>
+	  <h3>How to prepare for Big Tech Company Technical Interview</h3>
       <p>
 		Spoke to our special guest, <strong>Marc Lester Tan</strong>, our special guest. He's a Filipino developer
 		who is currently working as a Software Engineer @ Meta - Palo Alto, California, United States.	
 		<YouTubeEmbedSection url="https://youtu.be/6vL9uxH6vZ4" rounded />
       </p>
 
-	  <h3>Ep 6. Let's talk about Startups and Software Engineering with Keith Rull</h3>
+	  <h3>Let's talk about Startups and Software Engineering with Keith Rull</h3>
       <p>
 		Spoke to our special guest, <strong>Keith Oliver Rull</strong>, Engineering Leader / Startup Advisor 
 		and VP of Engineering in EyeRate California, US		
 		<YouTubeEmbedSection url="https://youtu.be/aLqmfJwOULI" rounded />
       </p>
 
-	  <h3>Ep 2. Astro 1.0 Web Framework is out! Let's check it out!</h3>
+	  <h3>Astro 1.0 Web Framework is out! Let's check it out!</h3>
       <p>
 		We took a look at Astro.build, a modern web framework which was currently released. We also did a bit of live coding in this episode. 
 		<p/>
@@ -159,7 +185,7 @@ const seo = {
 		<YouTubeEmbedSection url="https://youtu.be/YrqBk9B6tZI" rounded />
       </p>
 
-	  <h3>Ep 5. Free online tech learning resources and tools</h3>
+	  <h3>Free online tech learning resources and tools</h3>
       <p>
 		In this episode, I went through free learning resources and tools you can use to start software development.	
 		<p/>
@@ -175,6 +201,21 @@ const seo = {
 	  </Fragment></Button>
 
     </div>
+
+	<picture slot="image-container">
+		<h3>Coaching and Consulting Services</h3>
+		<a href="https://buymeacoffee.com/donvitocodes/extras" target="_blank"><img
+			src="/assets/images/donvitocodes/bmc_shop.png"
+			alt="Our Next Event"
+			loading="lazy"
+		/>
+		<p/>
+		 <Button href="https://buymeacoffee.com/donvitocodes/extras" customIcon>Learn More<Fragment slot="icon">
+		<!-- <Icon name="ic:baseline-chevron-right"/> -->
+	  </Fragment></Button>
+		</a>
+	  <p/>
+    </picture>
 	
      <!-- <picture slot="image-container">
 		<h3>Latest Video</h3>
@@ -185,7 +226,7 @@ const seo = {
 		/>
 		</a>
 	  <p/> -->
-	  <picture slot="image-container">
+	  <!-- <picture slot="image-container">
 		<h3>Upcoming Stream</h3>
 		<a href="https://lu.ma/npe46wqi" target="_blank"><img
 			src="/assets/images/donvitocodes/Enriching_Life_and_Work_with_AI_ 14_May_2024.png"
@@ -197,15 +238,15 @@ const seo = {
 		</a>
 	  <p/>
     </picture>
-    </picture>
+    </picture>-->
 	
   </StickyTextImageSection>
 
   <CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
-    <h2>Want to get notified about the next livestreams?</h2>
+    <h2>Do you need help on anything?</h2>
     <p></p>
-    <Button href="https://www.twitch.tv/donvitocodes" customIcon>Get Live Notifications, Follow me!<Fragment slot="icon">
-      <Icon name="ic:baseline-chevron-right"/>
+    <Button href="https://buymeacoffee.com/donvitocodes/e/260160" customIcon>Book a Discovery Call for Free!<Fragment slot="icon">
+      <!-- <Icon name="ic:baseline-chevron-right"/> -->
     </Fragment></Button>
   </CtaCardSection>
 
