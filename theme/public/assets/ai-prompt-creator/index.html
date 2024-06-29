@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Creator</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #666;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --hover-color: #000;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--hover-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: var(--hover-color);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature h3 {
+            color: var(--primary-color);
+        }
+
+        #home {
+            text-align: center;
+            padding: 0rem 0;
+        }
+
+        #home h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #home img {
+            max-width: 90%;
+            height: auto;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #home iframe {
+            width: 80%;
+            height: 500px;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <header>
+        <h1>AI Prompt Creator</h1>
+    </header> -->
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="https://www.donvitocodes.com" target="_blank">Developer</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h2>Unlock the Power of AI Prompts</h2>
+            <p> Leverage <strong>hundreds of ready-to-use templates</strong> to <strong>supercharge</strong> your ChatGPT Experience. </p>
+            <iframe src="https://www.youtube.com/embed/AUYmuXR47Fk" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <!-- <img src="screenshot.png" alt="Product Image">             -->
+            <br /><a href="https://donvito.github.io/ai-prompt-creator-live/" class="btn">Try Now</a>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Ready-to-Use Prompt Templates</h3>
+                    <p>Access a growing library of prompt templates designed for various tasks and purposes.</p>
+                </div>
+                <div class="feature">
+                    <h3>Simple Template Search</h3>
+                    <p>Quickly find the prompt templates you need with a simple search functionality.</p>
+                </div>
+                <div class="feature">
+                    <h3>Input Placeholders</h3>
+                    <p>Easily change the context of the prompts with input placeholders for enhanced reusability.</p>
+                </div>
+                <div class="feature">
+                    <h3>Prompt Templates Preview</h3>
+                    <p>Preview prompt templates before using them to ensure they meet your needs.</p>
+                </div>                        
+                <div class="feature">
+                    <h3>Easy Copy to Clipboard</h3>
+                    <p>Copy the final prompt to your clipboard with a single click and paste it directly into ChatGPT or
+                        any AI tool.</p>
+                </div>               
+                <div class="feature">
+                    <h3>Real-time Final Prompt Generation</h3>
+                    <p>When you are editing a template it will update instantly.</p>
+                </div>
+                <div class="feature">
+                    <h3>Lightweight and Fast</h3>
+                    <p>Lightweight and fast to use since the app is loaded in your browser.</p>
+                </div>
+                <div class="feature">
+                    <h3>Contribute a Template</h3>
+                    <p>You can contribute a template so you can use it later on.</p>
+                </div>
+            </div>
+        </section>
+     
+    </div>
+
+    <footer>
+        <p>&copy; 2024 AI Prompt Creator by DonvitoCodes.
+           All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
