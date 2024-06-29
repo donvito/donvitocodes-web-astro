@@ -4,6 +4,10 @@ export const nav = [
 		slug: '/',
 	},	
 	{
+		title: 'Blog',
+		slug: 'https://blog.donvitocodes.com',
+	},
+	{
 		title: 'Twitch',
 		slug: 'https://twitch.tv/donvitocodes',
 	},
@@ -11,24 +15,20 @@ export const nav = [
 		title: 'Youtube',
 		slug: 'https://youtube.com/donvitocodes',
 	},		
-	{
-		title: 'Facebook',
-		slug: 'https://fb.com/donvitocodes',
-	},
-	{
-		title: 'Twitter',
-		slug: 'https://twitter.com/donvito',
-	},
-	{
-		title: 'LinkedIn',
-		slug: 'https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=melvinvivas',
-	},
-	{
-		title: 'Blog',
-		slug: 'https://blog.donvitocodes.com',
-	},
-	{
-		title: 'Contact',
-		slug: '/company/contact',
-	},
+	// {
+	// 	title: 'Facebook',
+	// 	slug: 'https://fb.com/donvitocodes',
+	// },
+	// {
+	// 	title: 'Twitter',
+	// 	slug: 'https://twitter.com/donvito',
+	// },
+	// {
+	// 	title: 'Contact',
+	// 	slug: 'https://www.linkedin.com/in/melvinvivas/',
+	// },	
+	// {
+	// 	title: 'Contact',
+	// 	slug: '/company/contact',
+	// },
 ];
