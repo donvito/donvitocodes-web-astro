@@ -19,14 +19,14 @@ export const nav = [
 	// 	title: 'Facebook',
 	// 	slug: 'https://fb.com/donvitocodes',
 	// },
-	// {
-	// 	title: 'Twitter',
-	// 	slug: 'https://twitter.com/donvito',
-	// },
-	// {
-	// 	title: 'Contact',
-	// 	slug: 'https://www.linkedin.com/in/melvinvivas/',
-	// },	
+	{
+		title: 'Twitter',
+		slug: 'https://twitter.com/donvito',
+	},
+	{
+		title: 'LinkedIn',
+		slug: 'https://www.linkedin.com/in/melvinvivas/',
+	},	
 	// {
 	// 	title: 'Contact',
 	// 	slug: '/company/contact',
