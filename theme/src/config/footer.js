@@ -34,14 +34,10 @@ export const footerSocials = [
 export const footerLists = [	
 	{
 		title: 'Quick Links',
-		items: [
-			{
-				title: 'About',
-				slug: '/company/about',
-			},
+		items: [			
 			{
 				title: 'Blog',
-				slug: '/blog',
+				slug: 'https://blog.donvitocodes.com/',
 			},
 			{
 				title: 'Contact',
