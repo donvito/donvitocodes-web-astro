@@ -21,135 +21,72 @@ const seo = {
 
 <!-- <AnnouncementBar text="Book a Discovery call for Free!" target="_blank" href="https://buymeacoffee.com/donvitocodes/e/260160" slot="announcement-bar"/> -->
 <!--<AnnouncementBar text="Try my ChatGPT Prompt Creator for FREE" target="_blank" href="https://www.donvitocodes.com/assets/ai-prompt-creator/index.html" slot="announcement-bar"/>-->
-<AnnouncementBar text="Catch me live in Twitch!" target="_blank" href="https://twitch.tv/donvitocodes" slot="announcement-bar"/>
+<AnnouncementBar text="Follow me in Twitch!" target="_blank" href="https://twitch.tv/donvitocodes" slot="announcement-bar"/>
 <Layout seo={seo} >
 	
 	<TextAndImageHero>
 		<div slot="text-container">		
 					
-			<h3>Hello there!</h3>
+			<p>
+				{(() => {
+					const userDate = new Date();
+					const singaporeDate = new Date(userDate.toLocaleString("en-US", {timeZone: "Asia/Singapore"}));
+					const userHour = userDate.getHours();
+					const singaporeHour = singaporeDate.getHours();
 
-            <p>I'm Melvin, also known as DonvitoCodes. I'm a Filipino Software Engineer living in Singapore. I develop Generative AI apps.</strong></p> 
-				
-            <p>After working as a <strong>software developer and engineering manager for two decades,</strong> I decided to quit my job to build Generative AI applications.</p>		
+					const getGreeting = (hour) => {
+						if (hour < 5) return "Whoa, night owl!";
+						if (hour < 12) return "Rise and shine! Had your coffee yet?";
+						if (hour < 18) return "Afternoon delight! Hope you're having a great day!";
+						if (hour < 22) return "Evening, folks! Time to wind down?";
+						return "Shouldn't you be asleep? I won't tell if you don't!";
+					};
 
-			<p>I write about what I learn in <a href="https://blog.donvitocodes.com" target="_blank"><strong>my blog</a></strong></a>. I also do coding livestreams in <a href="https://twitch.tv/donvitocodes" target="_blank"><strong>Twitch</strong></a> and <a href="https://youtube.com/donvitocodes" target="_blank"><strong>Youtube</strong>.</a></p>
+					const userGreeting = getGreeting(userHour);
 
-            <p>You can also connect with me in <a href ="https://twitter.com/donvito" target="_blank"><strong>Twitter</strong></a>, 
-<a href="https://github.com/donvito" target="_blank"><strong>Github</strong></a>,
-                <a href="https://www.facebook.com/donvitocodes" target="_blank"><strong>Facebook</strong></a>, 
-                or
-                <a href="https://www.linkedin.com/in/melvinvivas/" target="_blank"><strong>LinkedIn</strong></a>.
-            <p>If you'd like some advise on how to use AI for your business or your tech career, you can <a href="https://buymeacoffee.com/donvitocodes/e/260160" target="_blank"><strong>book a free call with me</strong></a></p>
+					return (
+						<>
+							<p><strong>{userGreeting}</strong></p>
+							<p>It's <span id="singapore-clock"></span> here in Singapore, where I'm probably {singaporeHour < 7 ? "dreaming of code" : singaporeHour < 22 ? "coding up a storm" : "counting sheep"}.</p>
+							<script>
+								function updateClock() {
+									const singaporeTime = new Date().toLocaleString("en-US", {timeZone: "Asia/Singapore", hour: '2-digit', minute: '2-digit', hour12: true});
+									document.getElementById('singapore-clock').textContent = singaporeTime;
+								}
+								setInterval(updateClock, 1000);
+								updateClock();
+							</script>
+						</>
+					);
+				})()}
+			</p>
 
-
-			<!-- <p>If you need someone to talk to about your tech career, <a href="https://buymeacoffee.com/donvitocodes/e/260160" target="_blank">let's connect</a>! Let's discover how I help you navigate the tech world and thrive in your career.</p>  -->
-				
-			<!-- <p>I also provide consulting on how you can leverage technology such as AI and automation to help your organization. You can <a href="https://buymeacoffee.com/donvitocodes/e/260160" target="_blank">book a discover call for free</a>.</p>							 -->
-
-			<!-- <p>You can <a href="https://www.donvitocodes.com/company/contact" target="_blank">reach out to me</a> if you have any questions.</p> -->
-<!-- 
-
-			<div style="margin-bottom: 20px;">
-				Feel free to connect with me in
-				<a href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=melvinvivas" style ="font-weight: bold;" target="_blank">LinkedIn</a>,
-				<a href="https://twitter.com/donvito" style ="font-weight: bold;" target="_blank" target="_blank">Twitter</a>, or
-				<a href="https://www.facebook.com/donvitocodes" style ="font-weight: bold;" target="_blank" target="_blank">Facebook</a>
-				
-			</div> -->
 			
-			<!-- <div style="margin-bottom: 20px;">
-				<strong>You can also follow me in:</strong><br/>
-				<a href="https://twitch.tv/donvitocodes" style="display: inline-block; margin-right: 10px; font-weight: bold;"  target="_blank">
-					Twitch
-				</a>
-				<a href="https://youtube.com/donvitocodes" style="display: inline-block; margin-right: 10px; font-weight: bold;" target="_blank">
-					YouTube
-				</a> 
-				<a href="https://techblogs.donvitocodes.com" style="display: inline-block; margin-right: 10px; font-weight: bold;" target="_blank">
-					Medium
-				</a>
-				<a href="https://www.linkedin.com/in/melvinvivas/" style="display: inline-block; margin-right: 10px; font-weight: bold;" target="_blank">
-					LinkedIn
-				</a>
-				<a href="https://twitter.com/donvito" style="display: inline-block; margin-right: 10px; font-weight: bold;" target="_blank">
-					Twitter
-				</a>
-				<a href="https://www.facebook.com/donvitocodes" style="display: inline-block; margin-right: 10px; font-weight: bold;" target="_blank">
-					Facebook
-				</a>
-				
-			</div> -->
 
-			<!-- <div>
-				Want to discuss or share ideas? You can join our <a href="https://discord.gg/CnXuM2APee" target="_blank"><em>DonvitoCodes Discord Community</em></a>
-			</div> -->
-            <Button href="https://twitch.tv/donvitocodes" target="_blank" customIcon>Catch me live in Twitch!<Fragment slot="icon">
+            <p>Anyway, I'm <strong>DonvitoCodes</strong>, a Filipino Software Engineer living in Singapore.
+				<!-- I previously developed 
+				<a href="https://ohmyhome.com/en-sg/blog/your-ai-property-expert-is-here-introducing-homergpt-beta/" target="_blank" style="color: #4a90e2;"><strong>HomerGPT</strong></a> 
+				, an AI chat assistant with real estate knowledge for Ohmyhome.  -->
+				I'm currently in a career break and trying to build my own Gen AI apps.</p>		
+
+				<p>Are you building something too? I'd love to hear about it.</p>
+
+			
+            <Button href="https://twitch.tv/donvitocodes" target="_blank" customIcon>Follow me in Twitch!<Fragment slot="icon">
 				<Icon name="ic:baseline-chevron-right"/>
 			  </Fragment></Button>
-		</div>
-				
+		</div>				
 		<picture slot="image-container">						
 			<a href="https://twitch.tv/donvitocodes" style="display: inline-block; margin-right: 10px;" target="_blank"><img
 				src="/assets/images/donvitocodes/code-gen-ai-poster.jpg"
 				alt="DonvitoCodes"
 				id="home-hero-image"
 			/></a>			
-		</picture>		
-
-		<!-- <picture slot="image-container">						
-			<p><YouTubeEmbedSection url="https://www.youtube.com/embed/-m_S_0F3cNU?si=5iDRM60y-Gc5bDQX&amp;start=4251" rounded /></p>
-		</picture> -->
-
-
-		<!-- <picture slot="image-container">						
-			<a href="https://buymeacoffee.com/donvitocodes/extras" style="display: inline-block; margin-right: 10px;" target="_blank"><img
-				src="/assets/images/donvitocodes/bmc_shop.png"
-				alt="DonvitoCodes"
-				id="home-hero-image"
-			/></a>			
-		</picture> -->
-
-	
+		</picture>			
 	</TextAndImageHero>
-
-	<!-- <CustomerQuoteSection
-	quoteText="Learn AI with me! I share my learnings on AI and Software Development in my Twitch and YouTube channels. Follow me and let's have fun learning together!"
-	customerName="DonvitoCodes"
-/> -->
-
-	
-
-	<!-- <YouTubeEmbedSection url="https://youtu.be/lcalIP2CRqU" rounded /> -->
-
-
-	<!--<TextAndImageHero reversed>-->
-	<!---->
-	<!--	<picture slot="image-container">										-->
-	<!--		<img src="/assets/images/donvitocodes/launchstack.jpeg"/>-->
-	<!--	</picture>	-->
-	<!--	<div slot="text-container">		-->
-	<!---->
-	<!--		<h3>LaunchStack</h3>-->
-	<!---->
-	<!--		<p>-->
-	<!--			Hey there, fellow software engineers and aspiring startup founders! I'm excited to share a project I'm just starting. It's called LaunchStack. I'm using this project to learn NextJS.<br/><br/>-->
-	<!--			LaunchStack is a NextJS starter kit that will eventually have everything I need to build realize a startup idea. -->
-	<!--		</p>-->
-	<!---->
-	<!--		<Button href="https://x.com/donvito" target="_blank" customIcon>Follow my progress<Fragment slot="icon">-->
-	<!--			<Icon name="ic:baseline-chevron-right"/>-->
-	<!--		  </Fragment></Button>-->
-	<!---->
-	<!--	</div>-->
-	<!---->
-	<!---->
-	<!--</TextAndImageHero>-->
 
 	<TextAndImageHero reversed>
 		<div slot="text-container">		
-			
-		
 			<h3>AI Prompt Creator</h3>
 
 			<p>
