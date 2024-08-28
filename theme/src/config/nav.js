@@ -27,8 +27,8 @@ export const nav = [
 		title: 'LinkedIn',
 		slug: 'https://www.linkedin.com/in/melvinvivas/',
 	},	
-	// {
-	// 	title: 'Contact',
-	// 	slug: '/company/contact',
-	// },
+	{
+		title: 'Contact Me',
+		slug: '/company/contact',
+	},
 ];
