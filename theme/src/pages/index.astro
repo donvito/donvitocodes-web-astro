@@ -27,52 +27,19 @@ const seo = {
 	<TextAndImageHero>
 		<div slot="text-container">		
 					
-			<p>
-				{(() => {
-					const userDate = new Date();
-					const userHour = userDate.getHours();
-
-					const getGreeting = (hour) => {
-						if (hour < 12) return "Good morning! Have you had your coffee yet?";
-						if (hour < 18) return "Good afternoon! Hope you're having a great day!";
-						return "Good night! Time to wind down?";
-					};
-
-					const userGreeting = getGreeting(userHour);
-
-					return (
-						<>
-							<p><strong>{userGreeting}</strong></p>
-							<p>It's <span id="singapore-clock"></span> here in Singapore, where I'm probably <span id="singapore-activity"></span>.</p>
-							<script>
-								function updateClock() {
-									const singaporeDate = new Date(new Date().toLocaleString("en-US", {timeZone: "Asia/Singapore"}));
-									const singaporeHour = singaporeDate.getHours();
-									const singaporeTime = singaporeDate.toLocaleString("en-US", {hour: '2-digit', minute: '2-digit', hour12: true});
-									document.getElementById('singapore-clock').textContent = singaporeTime;
-									const activity = singaporeHour < 7 ? "dreaming of code" : singaporeHour < 22 ? "coding up a storm" : "counting sheep";
-									document.getElementById('singapore-activity').textContent = activity;
-								}
-								setInterval(updateClock, 1000);
-								updateClock();
-							</script>
-						</>
-					);
-				})()}
-			</p>
-
+			<p>Hello, I'm <strong><a href="https://x.com/donvito" target="_blank">DonvitoCodes</a></strong>, a Filipino Software Engineer living in Singapore.</p>
 			
-
-            <p>Anyway, I'm <strong>DonvitoCodes</strong>, a Filipino Software Engineer living in Singapore.
+            <p> 
 				<!-- I previously developed 
 				<a href="https://ohmyhome.com/en-sg/blog/your-ai-property-expert-is-here-introducing-homergpt-beta/" target="_blank" style="color: #4a90e2;"><strong>HomerGPT</strong></a> 
 				, an AI chat assistant with real estate knowledge for Ohmyhome.  -->
-				I'm currently taking a career break and trying to build my own Gen AI apps.</p>		
+				I'm currently taking a career break and building my own Gen AI apps.</p>		
 
-				<p>Are you building something too? I'd love to hear about it.</p>
+				<p>Are you building something too? I'd love to hear about it!</p>
+				
 
 			
-            <Button href="https://twitch.tv/donvitocodes" target="_blank" customIcon>Follow me in Twitch!<Fragment slot="icon">
+            <Button href="https://x.com/donvito" target="_blank" customIcon>Follow my journey in X<Fragment slot="icon">
 				<Icon name="ic:baseline-chevron-right"/>
 			  </Fragment></Button>
 		</div>				
